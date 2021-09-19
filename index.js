@@ -16,7 +16,6 @@ async function StartBrowser()
 {
     browser = await puppeteer.launch({
         headless: false,
-        executablePath: 'C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe',
         defaultViewport: null
     });
     return browser;
