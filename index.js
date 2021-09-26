@@ -12,13 +12,8 @@ app.get('/', (req, res) => {
 
 let browser;
 
-async function StartBrowser()
-{
-    browser = await puppeteer.launch({
-        executablePath : 'C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe',
-        defaultViewport: null,
-        args: ['--no-sandbox']
-    });
+async function StartBrowser(){
+    browser = await puppeteer.launch({ args: ['--no-sandbox'] });
     return browser;
 }
 
