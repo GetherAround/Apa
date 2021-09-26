@@ -19,12 +19,20 @@ async function StartBrowser()
         defaultViewport: null,
         args: ['--no-sandbox']
     });
+    let status = browser.isConnected();
+    if(status == false) return false;
     return browser;
 }
+
+(async function () {
+    let browser = await StartBrowser();
+    console.log('Browser Status:', browser ? 'Inited' : 'Not Inited');
+}())
 
 async function CheckShopee(url) {
     try {
         const browser = await StartBrowser();
+        if(browser === false) throw `Browser Cannot Inited`;
         let target_barang = [
             url
         ]
