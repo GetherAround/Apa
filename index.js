@@ -21,7 +21,6 @@ async function StartBrowser()
     if(status == false) return false;
     return browser;
 }
-
 (async function () {
     let browser = await StartBrowser();
     console.log('Browser Status:', browser ? 'Inited' : 'Not Inited');
