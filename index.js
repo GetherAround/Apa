@@ -15,7 +15,6 @@ let browser;
 async function StartBrowser()
 {
     browser = await puppeteer.launch({
-        executablePath : '/app/node_modules/puppeteer/.local-chromium/linux-901912',
         args: ['--no-sandbox']
     });
     let status = browser.isConnected();
