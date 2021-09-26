@@ -12,8 +12,7 @@ app.get('/', (req, res) => {
 
 let browser;
 
-async function StartBrowser()
-{
+async function StartBrowser(){
     browser = await puppeteer.launch({ args: ['--no-sandbox'] });
     return browser;
 }
