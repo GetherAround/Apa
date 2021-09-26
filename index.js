@@ -15,8 +15,6 @@ let browser;
 async function StartBrowser()
 {
     browser = await puppeteer.launch({
-        executablePath : 'C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe',
-        defaultViewport: null,
         args: ['--no-sandbox']
     });
     let status = browser.isConnected();
